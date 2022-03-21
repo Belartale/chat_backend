@@ -4,12 +4,13 @@ import { User, UserSchema } from './schemas/user.schema';
 import { RegisterModule } from './register/register.module';
 import { RefreshModule } from './refresh/refresh.module';
 
+// imports: [
+//   RefreshModule,
+//   RegisterModule,
+//   MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
+// ],
 @Module({
-  imports: [
-    RefreshModule,
-    RegisterModule,
-    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
-  ],
+  imports: [RefreshModule, RegisterModule],
   controllers: [],
   providers: [],
 })
